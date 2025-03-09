@@ -13,7 +13,7 @@ $prodid=$_GET['u_prod_id'];
 //display the value of the product id, for debugging purposes
 echo "<p>Selected product Id: ".$prodid;
 
-$SQL="select prodId, prodName, prodPicNameSmall,prodDescripShort,prodPrice from Product";
+$SQL="select prodId, prodName, prodPicNameLarge,prodDescripLong,prodPrice,prodQuantity from Product";
 //run SQL query for connected DB or exit and display error message
 $exeSQL=mysqli_query($conn, $SQL) or die (mysqli_error($conn));
 echo "<table style='border: 0px'>";
