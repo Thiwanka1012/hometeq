@@ -48,6 +48,9 @@ echo "<p>Number to be purchased: ";
 //the value entered in the form will be posted to the basket.php to be processed
 echo "<form action=basket.php method=post>";
 echo "<select name= p_quantity>";
+for($i=1; $i<=$arrayp['prodQuantity']; $i++){
+echo "<option value=".$i.">".$i."</option>";
+}
 echo "<option value=> </option>";
 echo "</select>";
 
