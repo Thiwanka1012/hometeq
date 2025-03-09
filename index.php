@@ -18,13 +18,16 @@ while ($arrayp=mysqli_fetch_array($exeSQL))
 {
 echo "<tr>";
 echo "<td style='border: 0px'>";
-//display the small image whose name is contained in the array
+
+//make the image into an anchor to prodbuy.php and pass the product id by URL (the id from the array)
+echo "<a href=prodbuy.php?u_prod_id=".$arrayp['prodId'].">";//display the small image whose name is contained in the array
 echo "<img src=images/".$arrayp['prodPicNameSmall']." height=200 width=200>";
+echo "</a>";
 echo "</td>";
 echo "<td style='border: 0px'>";
 echo "<p><h5>".$arrayp['prodName']."</h5>"; 
-echo "<p><h5>".$arrayp['prodDescripShort'] . "</h5>"; 
-echo "<p><h5>".$arrayp['prodPrice'] . "</h5>"; 
+echo "<p>".$arrayp['prodDescripShort']; 
+echo "<p><h3>".$arrayp['prodPrice'] . "</h3>"; 
 echo "</td>";
 echo "</tr>";
 }
