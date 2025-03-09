@@ -1,4 +1,5 @@
 <?php
+include("db.php");
 $pagename="“A smart buy for a smart home"; //Create and populate a variable called $pagename
 echo "<link rel=stylesheet type=text/css href=mystylesheet.css>"; //Call in stylesheet
 echo "<title>".$pagename."</title>"; //display name of the page as window title
@@ -14,9 +15,9 @@ $prodid=$_GET['u_prod_id'];
 echo "<p>Selected product Id: ".$prodid;
 
 $SQL="select prodId, prodName, prodPicNameLarge,prodDescripLong,prodPrice,prodQuantity from Product;
-WHERE prodId=" . $prodid;
+WHERE prodId = " .$prodid;
 //run SQL query for connected DB or exit and display error message
-$exeSQL=mysqli_query($conn, $SQL) or die (mysqli_error($conn));
+$exeSQL=mysqli_query($conn, $SQL) or  die('Could not connect: ' . mysqli_connect_error());
 echo "<table style='border: 0px'>";
 //create an array of records (2 dimensional variable) called $arrayp.
 //populate it with the records retrieved by the SQL query previously executed.
@@ -43,6 +44,9 @@ echo "</table>";
 
 include("footfile.html"); //include head layout
 echo "</body>";
+
+
+
 ?>
 
-include("db.php");
+
