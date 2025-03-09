@@ -47,6 +47,9 @@ echo "<p>Number to be purchased: ";
 //create form made of one text field and one button for user to enter quantity
 //the value entered in the form will be posted to the basket.php to be processed
 echo "<form action=basket.php method=post>";
+echo "<select name= p_quantity>";
+echo "<option value=> </option>";
+echo "</select>";
 
 echo "<input type=submit name='submitbtn' value='ADD TO BASKET' id='submitbtn'>";
 //pass the product id to the next page basket.php as a hidden value
