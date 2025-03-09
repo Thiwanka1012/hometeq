@@ -22,7 +22,9 @@ echo "<td style='border: 0px'>";
 echo "<img src=images/".$arrayp['prodPicNameSmall']." height=200 width=200>";
 echo "</td>";
 echo "<td style='border: 0px'>";
-echo "<p><h5>".$arrayp['prodName']."</h5>"; //display product name as contained in the array
+echo "<p><h5>".$arrayp['prodName']."</h5>"; 
+echo "<p><h5>".$arrayp['prodDescripShort'] . "</h5>"; 
+echo "<p><h5>".$arrayp['prodPrice'] . "</h5>"; 
 echo "</td>";
 echo "</tr>";
 }
