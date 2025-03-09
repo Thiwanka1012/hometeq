@@ -32,6 +32,8 @@ echo "</td>";
 echo "</tr>";
 }
 echo "</table>";
+
+
 include ("footfile.html");
 echo "</body>";
 ?>
