@@ -19,3 +19,5 @@ montes nascetur ridiculus mus. Dui accumsan sit amet nulla facilisi morbi tempus
 include("footfile.html"); //include head layout
 echo "</body>";
 ?>
+
+include("db.php");
