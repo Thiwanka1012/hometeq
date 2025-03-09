@@ -43,6 +43,17 @@ echo "</tr>";
 }
 echo "</table>";
 
+echo "<p>Number to be purchased: ";
+//create form made of one text field and one button for user to enter quantity
+//the value entered in the form will be posted to the basket.php to be processed
+echo "<form action=basket.php method=post>";
+echo "<input type=text name=p_quantity size=5 maxlength=3>";
+echo "<input type=submit name='submitbtn' value='ADD TO BASKET' id='submitbtn'>";
+//pass the product id to the next page basket.php as a hidden value
+echo "<input type=hidden name=h_prodid value=".$prodid.">";
+echo "</form>";
+echo "</p>";
+
 include("footfile.html"); //include head layout
 echo "</body>";
 
