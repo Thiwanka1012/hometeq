@@ -13,7 +13,8 @@ $prodid=$_GET['u_prod_id'];
 //display the value of the product id, for debugging purposes
 echo "<p>Selected product Id: ".$prodid;
 
-$SQL="select prodId, prodName, prodPicNameLarge,prodDescripLong,prodPrice,prodQuantity from Product";
+$SQL="select prodId, prodName, prodPicNameLarge,prodDescripLong,prodPrice,prodQuantity from Product;
+WHERE prodId=" . $prodid;
 //run SQL query for connected DB or exit and display error message
 $exeSQL=mysqli_query($conn, $SQL) or die (mysqli_error($conn));
 echo "<table style='border: 0px'>";
@@ -27,13 +28,14 @@ echo "<td style='border: 0px'>";
 
 //make the image into an anchor to prodbuy.php and pass the product id by URL (the id from the array)
 echo "<a href=prodbuy.php?u_prod_id=".$arrayp['prodId'].">";//display the small image whose name is contained in the array
-echo "<img src=images/".$arrayp['prodPicNameSmall']." height=200 width=200>";
+echo "<img src=images/".$arrayp['prodPicNameLarge']." height=400 width=350>";
 echo "</a>";
 echo "</td>";
 echo "<td style='border: 0px'>";
 echo "<p><h5>".$arrayp['prodName']."</h5>"; 
-echo "<p>".$arrayp['prodDescripShort']; 
-echo "<p><h3>".$arrayp['prodPrice'] . "</h3>"; 
+echo "<p>".$arrayp['prodDescripLong'] . "</p>"; 
+echo "<p><h3>".$arrayp['prodPrice'] . "</h3></p>"; 
+echo "<p>".$arrayp['prodQuantity'] . "</p>"; 
 echo "</td>";
 echo "</tr>";
 }
