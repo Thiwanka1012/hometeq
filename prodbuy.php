@@ -14,10 +14,11 @@ $prodid=$_GET['u_prod_id'];
 //display the value of the product id, for debugging purposes
 echo "<p>Selected product Id: ".$prodid;
 
-$SQL="select prodId, prodName, prodPicNameLarge,prodDescripLong,prodPrice,prodQuantity from Product;
+$SQL="select prodId, prodName, prodPicNameLarge,prodDesceipLong,prodPrice,prodQuantity from Product 
+
 WHERE prodId = " .$prodid;
 //run SQL query for connected DB or exit and display error message
-$exeSQL=mysqli_query($conn, $SQL) or  die('Could not connect: ' . mysqli_connect_error());
+$exeSQL=mysqli_query($conn, $SQL) or  die (mysqli_error($conn));
 echo "<table style='border: 0px'>";
 //create an array of records (2 dimensional variable) called $arrayp.
 //populate it with the records retrieved by the SQL query previously executed.
@@ -34,7 +35,7 @@ echo "</a>";
 echo "</td>";
 echo "<td style='border: 0px'>";
 echo "<p><h5>".$arrayp['prodName']."</h5>"; 
-echo "<p>".$arrayp['prodDescripLong'] . "</p>"; 
+echo "<p>".$arrayp['prodDesceipLong'] . "</p>"; 
 echo "<p><h3>".$arrayp['prodPrice'] . "</h3></p>"; 
 echo "<p>".$arrayp['prodQuantity'] . "</p>"; 
 echo "</td>";
