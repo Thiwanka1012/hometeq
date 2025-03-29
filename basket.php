@@ -16,6 +16,7 @@ include ("headfile.html"); //include header layout file
 
 echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 
+$total= 0; //create a variable called $total and set it to 0
 //display random text
 //if the posted ID of the new product is set i.e. if the user is adding a new product into the basket
 if (isset($_POST['h_prodid'])){
