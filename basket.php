@@ -17,21 +17,37 @@ include ("headfile.html"); //include header layout file
 echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 
 //display random text
+//if the posted ID of the new product is set i.e. if the user is adding a new product into the basket
+if (isset($_POST['h_prodid'])){
+    $newprodid = $_POST['h_prodid'];
+    //capture the required quantity of selected product using the POST method and $_POST superglobal variable
+    //and store it in a new local variable called $reququantity
+    $reququantity = $_POST['p_quantity'];
+    //Display id of selected product
+    echo "<p>Selected product Id: ".$newprodid;
+    //Display quantity of selected product
+    echo "<p>Selected quantity: ".$reququantity;
+    
+    //create a new cell in the basket session array. Index this cell with the new product id.
+    //Inside the cell store the required product quantity
+    $_SESSION['basket'][$newprodid]=$reququantity;
+    echo "<p>1 item added";
+}
 //capture the ID of selected product using the POST method and the $_POST superglobal variable
 //and store it in a new local variable called $newprodid
-$newprodid = $_POST['h_prodid'];
 //capture the required quantity of selected product using the POST method and $_POST superglobal variable
 //and store it in a new local variable called $reququantity
-$reququantity = $_POST['p_quantity'];
-//Display id of selected product
-echo "<p>Selected product Id: ".$newprodid;
-//Display quantity of selected product
-echo "<p>Selected quantity: ".$reququantity;
-
+//Display id of selected product  Not required any more, comment this code out
+//Display quantity of selected product  Not required any more, comment this code out
 //create a new cell in the basket session array. Index this cell with the new product id.
 //Inside the cell store the required product quantity
-$_SESSION['basket'][$newprodid]=$reququantity;
-echo "<p>1 item added";
+//Display "1 item added to the basket " message
+//else
+//Display "Basket unchanged " message
+//capture the ID of selected product using the POST method and the $_POST superglobal variable
+
+//and store it in a new local variable called $newprodid
+
 
 
 include("footfile.html"); //include head layout
