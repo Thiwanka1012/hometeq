@@ -33,15 +33,7 @@ if (isset($_POST['h_prodid'])){
     $_SESSION['basket'][$newprodid]=$reququantity;
     echo "<p>1 item added";
 }
-//capture the ID of selected product using the POST method and the $_POST superglobal variable
-//and store it in a new local variable called $newprodid
-//capture the required quantity of selected product using the POST method and $_POST superglobal variable
-//and store it in a new local variable called $reququantity
-//Display id of selected product  Not required any more, comment this code out
-//Display quantity of selected product  Not required any more, comment this code out
-//create a new cell in the basket session array. Index this cell with the new product id.
-//Inside the cell store the required product quantity
-//Display "1 item added to the basket " message
+
 //else
 //Display "Basket unchanged " message
 //capture the ID of selected product using the POST method and the $_POST superglobal variable
