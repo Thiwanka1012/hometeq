@@ -20,6 +20,7 @@ echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 $newprodid = $_POST['productid'];
 //capture the required quantity of selected product using the POST method and $_POST superglobal variable
 //and store it in a new local variable called $reququantity
+$reququantity = $_POST['p_quantity'];
 //Display id of selected product
 //Display quantity of selected product
 
