@@ -17,6 +17,7 @@ include ("headfile.html"); //include header layout file
 echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 
 $total= 0; //create a variable called $total and set it to 0
+
 //display random text
 //if the posted ID of the new product is set i.e. if the user is adding a new product into the basket
 if (isset($_POST['h_prodid'])){
@@ -38,8 +39,17 @@ else{
     //Display "Basket unchanged " message
     echo "<p>Basket unchanged";
 }
-//else
-//Display "Basket unchanged " message
+
+echo "<table id=baskettable border='1' style='width:50%'>
+    <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>SubTotal</th>
+        <th>Remove Product</th>
+    </tr>";
+ 
+
 //capture the ID of selected product using the POST method and the $_POST superglobal variable
 
 //and store it in a new local variable called $newprodid
