@@ -1,5 +1,5 @@
 <?php
-$pagename="template"; //Create and populate a variable called $pagename
+$pagename="Smart Basket"; //Create and populate a variable called $pagename
 
 echo "<link rel=stylesheet type=text/css href=mystylesheet.css>"; //Call in stylesheet
 
