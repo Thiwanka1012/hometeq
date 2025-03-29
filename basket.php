@@ -22,7 +22,9 @@ $newprodid = $_POST['productid'];
 //and store it in a new local variable called $reququantity
 $reququantity = $_POST['p_quantity'];
 //Display id of selected product
+echo "<p>Selected product Id: ".$newprodid;
 //Display quantity of selected product
+echo "<p>Selected quantity: ".$reququantity;
 
 
 include("footfile.html"); //include head layout
