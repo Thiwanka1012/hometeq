@@ -33,7 +33,10 @@ if (isset($_POST['h_prodid'])){
     $_SESSION['basket'][$newprodid]=$reququantity;
     echo "<p>1 item added";
 }
-
+else{
+    //Display "Basket unchanged " message
+    echo "<p>Basket unchanged";
+}
 //else
 //Display "Basket unchanged " message
 //capture the ID of selected product using the POST method and the $_POST superglobal variable
