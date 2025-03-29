@@ -28,6 +28,11 @@ echo "<p>Selected product Id: ".$newprodid;
 //Display quantity of selected product
 echo "<p>Selected quantity: ".$reququantity;
 
+//create a new cell in the basket session array. Index this cell with the new product id.
+//Inside the cell store the required product quantity
+$_SESSION['basket'][$newprodid]=$reququantity;
+echo "<p>1 item added";
+
 
 include("footfile.html"); //include head layout
 
