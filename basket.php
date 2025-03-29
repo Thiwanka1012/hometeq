@@ -1,4 +1,6 @@
 <?php
+include("db.php");//include database connection file
+
 $pagename="Smart Basket"; //Create and populate a variable called $pagename
 
 echo "<link rel=stylesheet type=text/css href=mystylesheet.css>"; //Call in stylesheet
