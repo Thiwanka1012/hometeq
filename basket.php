@@ -15,6 +15,13 @@ include ("headfile.html"); //include header layout file
 echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 
 //display random text
+//capture the ID of selected product using the POST method and the $_POST superglobal variable
+//and store it in a new local variable called $newprodid
+//capture the required quantity of selected product using the POST method and $_POST superglobal variable
+//and store it in a new local variable called $reququantity
+//Display id of selected product
+//Display quantity of selected product
+
 
 include("footfile.html"); //include head layout
 
