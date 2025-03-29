@@ -1,4 +1,6 @@
+
 <?php
+session_start(); //start a session to store user data
 
 include("db.php");//include database connection file
 
